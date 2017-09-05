@@ -1,0 +1,159 @@
+
+\documentclass[a4paper]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2552}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{Created=Wednesday, July 13, 2005 11:40:27}
+%TCIDATA{LastRevised=Wednesday, July 13, 2005 19:02:28}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Standard LaTeX\Blank - Standard LaTeX Article">}
+%TCIDATA{Language=American English}
+%TCIDATA{CSTFile=40 LaTeX article.cst}
+
+\setlength{\textheight}{8in}
+\setlength{\textwidth}{6in}
+\setlength{\oddsidemargin}{0mm}
+\setlength{\evensidemargin}{0mm}
+\setlength{\marginparwidth}{0mm}
+\setlength{\marginparsep}{0mm}
+\newtheorem{theorem}{Teorema}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{Proof} }{\ \rule{0.5em}{0.5em}}
+\input{tcilatex}
+
+\begin{document}
+
+\date{}
+\title{Computing an plotting the evolute of a curve}
+\author{}
+\maketitle
+
+This project was done for Differential Geometry Course taught by Prof.
+Gabriel Pripoaie at students from second\ year of University Spiru-Haret,
+Faculty of Mathematics and Computer Science.
+
+\section{Introduction}
+
+\begin{definition}
+Let $c:I\rightarrow E_{n}$ be a parametrized curve. If the following vectors
+are linear independents $c^{(1)}(t),c^{(2)}(t),...,c^{(n-1)}(t)$ $\forall
+t\in I$ we consider $c$ is in general position.
+\end{definition}
+
+\begin{proposition}
+Let $c:I\rightarrow E_{n}$ be a curve in general position and let \{$%
+e_{1},...,e_{n}\}$ be the Frenet mark associated to the curve. We have the
+following relations:%
+\begin{eqnarray*}
+e_{i}^{\prime }(t) &=&\sum_{j=1}^{n}a_{ij}(t)e_{j}(t) \\
+a_{ij}(t)+a_{ji}(t) &=&0,\forall i,j\in \{1,...,n\} \\
+a_{ij}(t) &=&0,if\,\,\,j>i+1
+\end{eqnarray*}
+\end{proposition}
+
+\begin{definition}
+Let $c:I\rightarrow E_{n}$ be a curve in general position and let \{$%
+e_{1},...,e_{n}\}$ be the Frenet mark associated to the curve. We call the
+following function $K_{i}:I\rightarrow R$ the curvatures of $c$ curve in the
+point $c(t)$ and they are defined by the following relation%
+\begin{eqnarray*}
+K_{i}(t) &=&\frac{a_{ii+1}(t)}{\left\Vert c^{\prime }(t)\right\Vert },i\in
+\{1,...,n-1\} \\
+a_{ii+1}(t) &=&\left\langle e_{i}^{\prime }(t),e_{i+1}^{\prime
+}(t)\right\rangle 
+\end{eqnarray*}
+\end{definition}
+
+\begin{definition}
+Let consider a curve $c:I\rightarrow E_{2}$ and let be $t_{0}\in I$ so that $%
+c^{\prime }(t_{0})\neq 0$ and $K_{1}(t_{0})\neq 0$. If a circle has three
+confronted points in $c(t_{0})$ with the image of the curve $c$ then it is
+called osculator circle of the curve in the point $c(t_{0})$.
+\end{definition}
+
+\begin{definition}
+Let $c:t\in I\rightarrow c(t)=(x(t),y(t))\in E_{2}$ a regulated curve with $%
+K_{1}(t)\neq 0,\forall t\in I$.The osculator circle of the curve $c$ in any
+point $c(t)$ has the center $\Omega =(X(t),Y(t))$. The curve $\Gamma :t\in
+I\rightarrow \Gamma (t)=(X(t),Y(t))\in E_{2}$ is called evolute of the curve 
+$c$.Where X(t) and Y(t) are defined by%
+\begin{eqnarray*}
+X(t) &=&x(t)-\frac{y^{\prime }(t)(x^{\prime 2}(t)+y^{\prime 2}(t))}{%
+x^{\prime }(t)y^{(2)}(t)-x^{(2)}(t)y^{\prime }(t)} \\
+Y(t) &=&y(t)+\frac{x^{\prime }(t)(x^{\prime 2}(t)+y^{\prime 2}(t))}{%
+x^{\prime }(t)y^{(2)}(t)-x^{(2)}(t)y^{\prime }(t)}
+\end{eqnarray*}
+\end{definition}
+
+\section{Implementation}
+
+The implementation is done in MAPLE\ because I have there differentiation,
+solving and plotting of data.
+
+\begin{algorithm}
+\end{algorithm}
+
+\begin{itemize}
+\item compute $x^{\prime }(t)y^{(2)}(t)-x^{(2)}(t)y^{\prime }(t)$ and find
+it's solutions. This points will be eliminated from the plot, because the
+function isn't define in those points.
+
+\item compute $K_{1}(t)=a_{ii+1}(t)/\left\Vert c^{\prime }(t)\right\Vert $.
+
+\item compute $c^{\prime }(t)=0$ and find it's solutions. This points will
+be also eliminated from the plot. 
+
+\item compute analytical $X(t)$ and $Y(t)$
+
+\item plot with blue the evolute and with red the curve
+
+\item mark the singularity points where the curve is zero
+\end{itemize}
+
+\begin{exercise}
+Compute and plot the evolute for cicloide.
+\end{exercise}
+
+\textbf{Solution:}
+
+The cicloide is given by the following curve%
+\[
+c:I\subset R\rightarrow E_{2},a>0\,\,where\,c(t)=(a\ast (t-\sin (t)),a\ast
+(1-\cos (t))
+\]
+
+Let be $a=2$ and $I=[-2\pi ,5\pi ]$. 
+
+In this case we have $K=4(\cos (t)-1)\left( \left\vert -2+2\cos
+(t)\right\vert ^{2}+4\left\vert \sin (t)\right\vert ^{2}\right) ^{-3/2}$ and
+the parametric coordinates of osculator circle are $(2t+2\sin (t),-2+2\cos
+(t))$.
+
+\FRAME{dtbphF}{3.6646in}{3.5724in}{0pt}{}{}{Figure}{\special{language
+"Scientific Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display
+"USEDEF";valid_file "T";width 3.6646in;height 3.5724in;depth
+0pt;original-width 4.0714in;original-height 3.9684in;cropleft "0";croptop
+"1";cropright "1";cropbottom "0";tempfilename
+'evolute.bmp';tempfile-properties "XPR";}}
+
+\end{document}
