@@ -1,0 +1,262 @@
+
+\documentclass{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2552}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{Created=Tuesday, June 07, 2005 18:57:28}
+%TCIDATA{LastRevised=Tuesday, June 07, 2005 20:23:14}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Standard LaTeX\Blank - Standard LaTeX Article">}
+%TCIDATA{CSTFile=40 LaTeX article.cst}
+
+\setlength{\textheight}{8in}
+\setlength{\textwidth}{6in}
+\setlength{\oddsidemargin}{0mm}
+\setlength{\evensidemargin}{0mm}
+\setlength{\marginparwidth}{0mm}
+\setlength{\marginparsep}{0mm}
+\newtheorem{theorem}{Teorema}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axioma}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Concluzie}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corolar}
+\newtheorem{criterion}[theorem]{Criteriu}
+\newtheorem{definition}[theorem]{Definitie}
+\newtheorem{example}[theorem]{Exemplu}
+\newtheorem{exercise}[theorem]{Exercitiu}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notatie}
+\newtheorem{problem}[theorem]{Problema}
+\newtheorem{proposition}[theorem]{Propozitie}
+\newtheorem{remark}[theorem]{Remarka}
+\newtheorem{solution}[theorem]{Solutie}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{Demonstratie} }{\ \rule{0.5em}{0.5em}}
+\input{tcilatex}
+
+\begin{document}
+
+\title{Teste pentru egalitati de medii}
+\author{Dimitriu Gabriel Spiru Haret AnIII}
+\maketitle
+
+\begin{exercise}
+\bigskip 
+\end{exercise}
+
+Pentru a obtine informatii asupra rezistentei la coroziune a unui anumit tip
+de conducta de otel se face un exepriment in care 40 de specimene sunt
+ngropate timp de 3 ani si apoi masurind pentru fiecare specimen penetrarea
+s-a obtinut: $\overline{x}=43.7,s=2.7$. Conducta este fabricata cu
+specificatia ca penetratia este $m=46$. Pentru a vedea daca datele
+experimentale indica faptul ca \ specificarea nu este corecta sa se verifice
+la $\alpha =0.05$ $H_{0}:m=46;H_{1}:m>46$.
+
+\begin{proof}
+In cazul nostru avem urmatoarele date:%
+\begin{eqnarray*}
+n &=&40 \\
+\overline{x} &=&43.7 \\
+s &=&2.7 \\
+m_{0} &=&46 \\
+\alpha  &=&0.05
+\end{eqnarray*}
+
+Deoarece avem test de medie in care nu cunoastem dispersia vom utiliza
+testul F unilateral dreapta.
+
+Calculam dispersia de calcul
+
+\[
+s_{xx}^{2}=n(\overline{x}-m_{0})^{2}=40(43.7-46)^{2}=211.6
+\]
+
+Calculam $F_{calc}$%
+\[
+F_{calc}=\frac{s_{xx}^{2}}{s^{2}}=\frac{211.6}{(2.7)^{2}}=29
+\]
+
+Luam din tabele cuantiala%
+\[
+F_{1-\alpha }(1,n-1)=F_{1-0.05}(1,39)=F_{0.95}(1,39)=4.09
+\]
+
+Deoarece avem test unilateral dreapta in care%
+\[
+F_{calc}=29>F_{0.95}(1,39)=4.09
+\]
+
+vom respinge ipoteza $H_{0}$.
+\end{proof}
+
+\begin{exercise}
+Dupa culegerea datelor a doua procese tehnologice avem urmatoarele masuratori
+\end{exercise}
+
+Pentru primul proces: $n_{1}=12$ proces de distributie $N(m_{1},20^{2})$:
+
+\begin{tabular}{lllllllllllll}
+$i$ & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11 & 12 \\ 
+$x_{1,i}$ & 0.7 & 0.9 & 0.3 & 0.8 & 0.5 & 1 & 1.3 & 1.1 & 0.6 & 0.2 & 1.2 & 
+1.4%
+\end{tabular}
+
+Pentru al doilea proces: $n_{2}=10$ proces de distributie $N(m_{2},25^{2})$:
+
+\begin{tabular}{lllllllllll}
+$i$ & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 \\ 
+$x_{2,i}$ & 0.9 & 0.8 & 1.4 & 1.3 & 0.7 & 1.9 & 1 & 1.6 & 1.2 & 2%
+\end{tabular}
+
+La pragul de incredere $\alpha =0.05$ sa se verifice ipoteza $%
+H_{0}:m_{1}=m_{2}$ fata de contraipoteza $H_{1}:m_{1}<m_{2}$.
+
+\begin{proof}
+Deoarece avem un test de egalitate a mediilor cind cunoastem dispersia celor
+doua procese vom aplica testul Z.
+
+Asadar intii vom calcula mediile de selectie ale celor doua procese:
+
+\begin{eqnarray*}
+\overline{x_{n_{1}}} &=&\frac{1}{n_{1}}\sum_{i=1}^{n_{1}}x_{1,i}=0.83 \\
+\overline{x_{n_{2}}} &=&\frac{1}{n_{2}}\sum_{i=1}^{n_{2}}x_{2,i}=1.12
+\end{eqnarray*}
+
+Acum calculam $Z_{calc}$%
+\[
+Z_{calc}=\frac{\overline{x_{n_{1}}}-\overline{x_{n_{2}}}+m_{1}-m_{2}}{\sqrt{%
+\frac{\sigma _{1}^{2}}{n_{1}}+\frac{\sigma _{2}^{2}}{n_{2}}}}=\frac{%
+0.83-1.12+0}{\sqrt{\frac{20^{2}}{12}+\frac{25^{2}}{10}}}=-0.029
+\]
+
+Din tabel obtine $Z_{\alpha }=Z_{0.05}=1.96$.
+
+Cum $Z_{cal}=-0.029<Z_{\alpha }=1.96$ vom respinge ipoteza $H_{0}$.
+\end{proof}
+
+\begin{exercise}
+In urma a $n=8$ masuratori asupra a doua procese tehnologice s-au obtinut
+urmatoarele date
+\end{exercise}
+
+\begin{tabular}{lllllllll}
+$i$ & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 \\ 
+$x_{1,i}$ & 10.28 & 10.27 & 10.3 & 10.32 & 10.27 & 10.27 & 10.28 & 10.29 \\ 
+$x_{2,i}$ & 10.31 & 10.31 & 10.26 & 10.3 & 10.27 & 10.31 & 10.20 & 10.26%
+\end{tabular}
+
+Se se verifice la pragul de semnificatie $\alpha =0.01$ ca cele doua procese
+au aceeasi medie.
+
+\begin{proof}
+Deoarece avem test asupra mediei a doua procese distincte si in acelasi timp
+nu cunoastem dispersiile celor doua procese vom utiliza testul Student
+pentru doua medii.
+
+Ipotezele statistice sunt:
+
+\begin{eqnarray*}
+H_{0} &:&m_{1}=m_{2} \\
+H_{1} &:&m_{1}\neq m_{2}
+\end{eqnarray*}
+
+Vom calcula mediile si dispersiile de selectie ale celor doua procese:%
+\begin{eqnarray*}
+\overline{x_{1}} &=&\frac{1}{n}\sum_{i=1}^{n}x_{1,i}=10.285 \\
+\overline{x_{2}} &=&\frac{1}{n}\sum_{i=1}^{n}x_{2,i}=10.289 \\
+s_{1}^{2} &=&\frac{1}{n-1}\sum_{i=1}^{n}(x_{1,i}-\overline{x_{1}}%
+)^{2}=0.000314 \\
+s_{2}^{2} &=&\frac{1}{n-1}\sum_{i=1}^{n}(x_{2,i}-\overline{x_{2}}%
+)^{2}=0.000498
+\end{eqnarray*}
+
+Vom calcula statistica $t_{calc}$:%
+\[
+t_{calc}=\frac{\overline{x_{1}}-\overline{x_{2}}+m_{1}-m_{2}}{\sqrt{\frac{%
+s_{1}^{2}}{n_{1}}+\frac{s_{2}^{2}}{n_{2}}}}=\frac{10.285-10.289}{\sqrt{\frac{%
+0.000314}{8}+\frac{0.00498}{8}}}=0.398
+\]
+
+Din tabel luam cuantila $t_{\alpha
+}(n+n-2)=t_{0.01}(8+8-2)=t_{0.01}(14)=-t_{0.99}(14)=-2.62$
+
+Deoarece $\left\vert t_{calc}\right\vert =0.398>t_{0.01}(14)=-2.62$ vom
+respinge ipoteza $H_{0}$.
+\end{proof}
+
+\begin{exercise}
+\end{exercise}
+
+Greutatea carnii amabalata in pachete de 1000g de masina M$_{1}$ este o
+variabila aleatoare normala cu $\sigma _{1}=3g$ iar cea ambalata de masina M$%
+_{2}$ are $\sigma _{2}=4g$. S-au cintarit 100 de pachete din produsele
+fiecarei masini si-au obtinut $\overline{x_{1}}=1007g$ si $\overline{x_{2}}%
+=1002g$. Sa se verifice $H_{0}:m_{1}=m_{2};H_{1}:m_{1}\neq m_{2}$ la $\alpha
+=0.05$.
+
+\begin{proof}
+In conformitate cu enuntul problemei vom folosi testul Z pentru 2 medii si
+avem:%
+\begin{eqnarray*}
+n_{1} &=&n_{2}=100 \\
+\overline{x_{1}} &=&1007 \\
+\overline{x_{2}} &=&1002 \\
+\sigma _{1} &=&3 \\
+\sigma _{2} &=&4
+\end{eqnarray*}
+
+Cu aceste date calculam%
+\[
+Z_{calc}=\frac{\overline{x_{1}}-\overline{x_{2}}-0}{\sqrt{\frac{\sigma
+_{1}^{2}}{n_{1}}+\frac{\sigma _{2}^{2}}{n_{2}}}}=\frac{1007-1002}{\sqrt{%
+\frac{9}{100}+\frac{16}{100}}}=10
+\]
+
+Luam din tabel $Z_{tab}=Z_{1-\alpha /2}=Z_{0.975}=1.9$.
+
+Deoarece $\left\vert Z_{calc}\right\vert =10>Z_{tab}=1.9$ vom respinge
+ipoteza $H_{0}$.
+\end{proof}
+
+\begin{exercise}
+\end{exercise}
+
+Dintr-o populatie normala cu $\sigma =5$ s-au extras doua selectii de volum
+9. Selectiile au dat mediile de selectie 2 respectiv 3. Se poate afirma ca
+la pragul de semnificatie de 0.05 ca diferentele inregistrate sunt
+intimplatoare ?
+
+\begin{proof}
+Din problema avem urmatoarele date%
+\begin{eqnarray*}
+\sigma  &=&5 \\
+n &=&9 \\
+\alpha  &=&0.05 \\
+\overline{x_{1}} &=&2 \\
+\overline{x_{2}} &=&3 \\
+H_{0} &:&m_{1}=m_{2} \\
+H_{1} &:&m_{1}\neq m_{2}
+\end{eqnarray*}
+
+Deoarece cunoastem dispersiile vom utiliza testul Z pentru 2 medii.
+
+Calculam $Z_{calc}$:%
+\[
+\left\vert Z_{calc}\right\vert =\left\vert \frac{\overline{x_{1}}-\overline{%
+x_{2}}}{\sqrt{2\frac{\sigma ^{2}}{n}}}\right\vert =\left\vert \frac{-1}{%
+\sqrt{\frac{2\cdot 25}{9}}}\right\vert =\frac{3}{5\sqrt{2}}=0.424
+\]
+
+Din tabel vom lua cuantila $Z_{tab}=Z_{1-\alpha /2}=Z_{0.975}=1.9$.
+
+Deoarece $\left\vert Z_{calc}\right\vert =0.424<Z_{tab}=1.9$ vom accepta
+ipoteza $H_{0}$, deci diferentele inregistrate sunt intimplatoare.
+\end{proof}
+
+\end{document}

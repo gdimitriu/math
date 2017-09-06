@@ -1,0 +1,146 @@
+
+\documentclass{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2552}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{Created=Tuesday, April 19, 2005 20:02:55}
+%TCIDATA{LastRevised=Monday, January 23, 2006 16:35:43}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Standard LaTeX\Blank - Standard LaTeX Article">}
+%TCIDATA{Language=American English}
+%TCIDATA{CSTFile=40 LaTeX article.cst}
+
+\setlength{\textheight}{8in}
+\setlength{\textwidth}{6in}
+\setlength{\oddsidemargin}{0mm}
+\setlength{\evensidemargin}{0mm}
+\setlength{\marginparwidth}{0mm}
+\setlength{\marginparsep}{0mm}
+\newtheorem{theorem}{Teorema}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axioma}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Concluzie}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corolar}
+\newtheorem{criterion}[theorem]{Criteriu}
+\newtheorem{definition}[theorem]{Definitie}
+\newtheorem{example}[theorem]{Exemplu}
+\newtheorem{exercise}[theorem]{Exercitiu}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notatie}
+\newtheorem{problem}[theorem]{Problema}
+\newtheorem{proposition}[theorem]{Propozitie}
+\newtheorem{remark}[theorem]{Remarka}
+\newtheorem{solution}[theorem]{Solutie}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\input{tcilatex}
+
+\begin{document}
+
+\title{Teste statistice 2}
+\author{Copyright Gabriel Dimitriu}
+\maketitle
+
+\begin{exercise}
+\bigskip 
+\end{exercise}
+
+Nivelul de calciu in singele \ unui adult tinar este in medie 9.5mg/dl si cu 
+$\sigma =0.4$. O clinica masoara nivelul calciului la 160 de pacienti si
+gaseste media de 9.3. Verificati ipoteza: $H_{0}:\,m=9.5;H_{1}:m\neq
+9.5;\alpha =0.05$.
+
+\textbf{Rezolvare:}
+
+Deoarece avem $H_{1}:\,m\neq 9.5$ vom considera un test bilitater si
+deoarece avem cunoscuta media vom folosi testul Z.
+
+Calculam
+
+\[
+Z_{calc}=\frac{\overline{x}-m_{0}}{\sigma /\sqrt{n}} 
+\]
+
+unde: $\overline{x}=9.3$,$\sigma =0.4$, $m_{0}=9.5$, $n=160$.
+
+Inlocuind aceste valori in formula anterioara avem
+
+\[
+Z_{calc}=-6.32 
+\]
+
+Deoarece avem test bilateral avem
+
+\[
+Z_{tab}=Z_{1-\alpha /2}=Z_{1-0.025}=Z_{0.975}=1.96 
+\]
+
+Pentru a verifica corectitudinea ipotezelor vom efectua testul:
+
+\[
+\left\vert Z_{calc}\right\vert =6.32>Z_{tab}=1.96 
+\]
+
+Deci vom respinge ipoteza nula $H_{0}$.
+
+\begin{exercise}
+\end{exercise}
+
+Se iau esantioane din apa rezultata din racirea la o centrala nucleara. Se
+considera ca daca temperatura apei evacuate nu depaseste 60$^{0}C$ nu
+consituie o primejdie \ pentru mediul inconjurator. Se aleg 70 de esantionae
+de apa si se masoara temperatura fiecarui asemenea esantion si se obtin
+rezultatele:
+
+\[
+\begin{tabular}{lllllll}
+temp(x) & 52 & 54 & 58 & 61 & 64 & 65 \\ 
+frecv & 14 & 21 & 18 & 10 & 5 & 2%
+\end{tabular}%
+\]
+
+a)Care sunt erorile de tip I si de tip II ce apar la verificarea ipotezei:
+
+\begin{eqnarray*}
+H_{0} &:&\,m=60 \\
+H_{1} &:&m>60
+\end{eqnarray*}
+
+b)Aflati puterea testului folosit.
+
+\textbf{Rezolvare:}
+
+Vom calcula media si dispersia de selectie a esantioanelor:
+
+\begin{eqnarray*}
+\overline{x} &=&\frac{\sum_{i=1}^{6}x\ast frecv}{70}=56.657 \\
+s^{2} &=&\frac{\sum_{i=1}^{6}frecv\ast (x_{i}-\overline{x})}{69}%
+=15.677\rightarrow s=\sqrt{s^{2}}=\sqrt{15.677}=3.959
+\end{eqnarray*}
+
+Pentru a calcula erorile de tip I si II\ avem definitiile lor, in care $%
+T_{n}(x_{1},x_{2},...,x_{n})$ este o statistica iar $W$ si $\overline{W}$
+sunt doua regiuni complementare care vor defini erorile:
+
+\begin{eqnarray*}
+\alpha &=&P(T_{n}(x_{1},..,x_{n})\in W|H_{0})=P\left( \frac{\overline{x}-m}{%
+s/\sqrt{n}}>t_{1-\alpha ;n-1}|m=m_{0}\right) \\
+\beta &=&P(T_{n}(x_{1},..,x_{n})\in \overline{W}|H_{1})=P\left( \frac{%
+\overline{x}-m}{s/\sqrt{n}}<t_{\alpha ;n-1}|m>m_{0}\right)
+\end{eqnarray*}
+
+\bigskip Inlocuind avem:
+
+\[
+\alpha =P(-7.064>t_{1-\alpha ;69})=\int_{-\infty }^{-7.0129}\frac{\Gamma (35)%
+}{14.723\ast \Gamma (34.5)}(1+\frac{x^{2}}{69})^{-35}dx=0.6302526901\ast
+10^{-9} 
+\]
+
+\end{document}

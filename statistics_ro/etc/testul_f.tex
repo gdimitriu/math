@@ -1,0 +1,80 @@
+
+\documentclass{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2552}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{Created=Sunday, June 05, 2005 11:18:33}
+%TCIDATA{LastRevised=Sunday, June 05, 2005 11:19:28}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Standard LaTeX\Blank - Standard LaTeX Article">}
+%TCIDATA{CSTFile=40 LaTeX article.cst}
+\setlength{\textheight}{8in}
+\setlength{\textwidth}{6in}
+\setlength{\oddsidemargin}{0mm}
+\setlength{\evensidemargin}{0mm}
+\setlength{\marginparwidth}{0mm}
+\setlength{\marginparsep}{0mm}
+\newtheorem{theorem}{Teorema}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axioma}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Concluzie}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corolar}
+\newtheorem{criterion}[theorem]{Criteriu}
+\newtheorem{definition}[theorem]{Definitie}
+\newtheorem{example}[theorem]{Exemplu}
+\newtheorem{exercise}[theorem]{Exercitiu}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notatie}
+\newtheorem{problem}[theorem]{Problema}
+\newtheorem{proposition}[theorem]{Propositie}
+\newtheorem{remark}[theorem]{Remarka}
+\newtheorem{solution}[theorem]{Solutie}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{Demostratie} }{\ \rule{0.5em}{0.5em}}
+\input{tcilatex}
+
+\begin{document}
+
+\title{Testul F}
+\author{Copyright 2005 Gabriel Dimitriu}
+\maketitle
+
+\begin{exercise}
+\bigskip
+\end{exercise}
+
+O selectie de volum $n_{1}=10$ din becurile avind marca 1 a dat $\overline{x}%
+_{10}=932ore$ si $s_{10}^{2}=8114$. O selectie de volum $n_{2}=14$ din
+becurile avind marca 2 a dat $\overline{x}_{14}=859ore$ si $s_{14}^{2}=5324$%
+. Sa se foloseasca aceste date pentru a verifica ipoteza $H_{0}:\sigma
+_{1}^{2}=\sigma _{2}^{2}$ fata de $H_{1}:\sigma _{1}^{2}>\sigma _{2}^{2}$ la
+pragul de semnificatie $\alpha =0.01$.
+
+\textbf{Rezolvare:}
+
+Deoarece avem de verificat egalitata a doua dispersii vom folosi testul
+Fisher. Deoarece avem \TEXTsymbol{>} in ipoteza $H_{1}$ vom folosi testul
+Fisher unilateral dreapta.
+
+Pentru aceasta calculam:
+
+\[
+\frac{s_{10}^{2}}{s_{14}^{2}}=\frac{8114}{5324}=1.524 
+\]
+
+Cautam in tabel quantila si avem
+
+\[
+F_{1-\alpha }(n_{2}-1,n_{1}-1)=F_{0.99}(13,9)=5.11 
+\]
+
+Deoarece $\frac{s_{10}^{2}}{s_{14}^{2}}=1.524<F_{0.99}(13,9)=5.11$ vom
+respinge ipoteza $H_{0}$.
+
+\end{document}

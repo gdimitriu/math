@@ -1,0 +1,323 @@
+
+\documentclass{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2552}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{Created=Monday, May 30, 2005 10:44:34}
+%TCIDATA{LastRevised=Sunday, June 05, 2005 11:19:18}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Standard LaTeX\Blank - Standard LaTeX Article">}
+%TCIDATA{CSTFile=40 LaTeX article.cst}
+
+\setlength{\textheight}{8in}
+\setlength{\textwidth}{6in}
+\setlength{\oddsidemargin}{0mm}
+\setlength{\evensidemargin}{0mm}
+\setlength{\marginparwidth}{0mm}
+\setlength{\marginparsep}{0mm}
+\newtheorem{theorem}{Teorema}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axioma}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Concluzie}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corolar}
+\newtheorem{criterion}[theorem]{Criteriu}
+\newtheorem{definition}[theorem]{Definitie}
+\newtheorem{example}[theorem]{Exemplu}
+\newtheorem{exercise}[theorem]{Exercitiu}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notatie}
+\newtheorem{problem}[theorem]{Problema}
+\newtheorem{proposition}[theorem]{Propositie}
+\newtheorem{remark}[theorem]{Remarka}
+\newtheorem{solution}[theorem]{Solutie}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\input{tcilatex}
+
+\begin{document}
+
+\title{Testul Z}
+\author{Copyright 2005 Gabriel Dimitriu}
+\maketitle
+
+\begin{exercise}
+Fie X\symbol{126}N($\mu $,81)
+\end{exercise}
+
+Sa se verifica la pragul de semnificatie $\alpha =0.05$ ipoteza $H_{0}:\mu
+=840$ fata de $H_{1}:\mu <840$ folosindu-se o selectie de volum n=25 pentru
+care $\overline{x}=838$.
+
+\textbf{Rezolvare:}
+
+Deoarece avem $H_{1}:\mu <m_{0}$ si dispersia $\sigma ^{2}=81$ vom aplica
+testul Z unitalteral stinga pentru medie.
+
+Vom calcula valoarea critica pentru acest tip de test
+
+\[
+\times _{c}=m_{0}+\frac{\sigma }{\sqrt{n}}u_{\alpha }=840+\frac{9}{5}%
+(-1.64)=837,048 
+\]
+
+Deoarece $\overline{x}>x_{c}$ accept ipoteza $H_{0}$.
+
+\begin{exercise}
+Fie X\symbol{126}N($\mu $,144)
+\end{exercise}
+
+i) Sa se verifice la pragul de semnificatie $\alpha =0.01$ ipoteza $%
+H_{0}:\mu =74$ fata de $H_{1}:\mu >74$ pe baza unei selectii de volum n=36
+pentru care $\overline{x}=76$
+
+ii) Sa se calculeze $\pi (78)$.
+
+\textbf{Rezolvare:}
+
+i) Deoarece avem $H_{1}:\mu >m_{0}$ si dispersia $\sigma ^{2}=144$ vom
+aplica testul Z unilateral stinga pentru medie.
+
+Vom calcula valoarea critica pentru acest tip de test
+
+\[
+x_{c}=m_{0}+\frac{\sigma }{\sqrt{n}}u_{1-\alpha }=74+\frac{12}{6}2.33=78.66 
+\]
+
+Deoarece $\overline{x}<x_{c}$ $(76<78.66)$ voi accepta ipoteza $H_{0}$.
+
+ii)Puterea testului este data de formula
+
+\[
+\pi (m_{1})=\Phi \left( u_{\alpha }+\frac{m_{1}-m_{0}}{\sigma /\sqrt{n}}%
+\right) 
+\]
+
+Inlocuind avem:
+
+\[
+\pi (78)=\Phi (-2.33+\frac{78-74}{12/6})=\Phi (-0.33)=1-\Phi
+(0.33)=1-0.6293=0.3707 
+\]
+
+\begin{exercise}
+\bigskip
+\end{exercise}
+
+O fabrica de televizoare afirma ca pentru atingerea unui anumit nivel (grad)
+de stralucire sunt necesario 320 microamperi. O selectie de 28 astfel de
+televizoare a dat $\overline{x}=331$. Amerajul necesar pentru a atinge
+stralucirea dorita este o variabila $\ N(\mu ,144)$.
+
+i)La pragul de semnificatie $\alpha =0.05$ sa se verifice ipoteza $H_{0}:\mu
+=320$ fata de alternativa corespunzatoare.
+
+ii)Daca $\mu =330$ care este probabilitatea erorii de ordinul doi ?
+
+\textbf{Rezolvare:}
+
+i) Deoarece ipoteza $H_{1}:\mu \neq 320$ vom folosi testul Z bilateral.
+
+Vom calcula \ regiunea critica pentru $\sigma =12$.
+
+\[
+\left\vert \frac{\overline{x}-m_{0}}{\sigma /\sqrt{n}}\right\vert
+=\left\vert \frac{331-320}{12/5.29}\right\vert =4.849 
+\]
+
+Pe care o comparam cu cuantila normala $u_{1-\alpha /2}=u_{0.975}=1.96$
+
+Deoarece 4.849\TEXTsymbol{>}1.96 vom respinge ipoteza H$_{0}$.
+
+ii)Probabilitatea erorii de ordin 2 este:
+
+\begin{eqnarray*}
+P(u &\in &W|H_{1})=\beta \\
+P(|u| &<&u_{tab}|m_{1})=P(u<u_{tab})+P(u>u_{tab})=\Phi (u_{tab})+1-\Phi
+(-u_{tab})=2\Phi (u_{tab})
+\end{eqnarray*}
+
+Deci
+
+\[
+\beta =2\ast \Phi (1.96)=1.95??? 
+\]
+
+\begin{exercise}
+Recolta unei anumite cereale este o variabila X\symbol{126}N($\mu $,0.25)
+\end{exercise}
+
+Daca de \ pe 100ha s-a obtinut o recolta medie $\overline{x}=2050Kg/ha$ sa
+se verifice, la pragul de semnificatie $\alpha =0.05$, ipoteza $H_{0}:\mu
+=2000$ fata de $H_{1}:\mu >2000$.
+
+\textbf{Rezolvare:}
+
+Deoarece avem $H_{1}:\mu >m_{0}$ si dispersia $\sigma ^{2}=0.25$ vom aplica
+testul Z unilateral stinga pentru medie.
+
+Vom calcula valoarea critica pentru acest tip de test
+
+\[
+x_{c}=m_{0}+\frac{\sigma }{\sqrt{n}}u_{1-\alpha }=2000+\frac{0.5}{10}%
+2.57=2000.128 
+\]
+
+Deoarece $\overline{x}=2050>x_{c}=2000.128$ vom accepta ipoteza $H_{0}.$
+
+\begin{exercise}
+\bigskip 
+\end{exercise}
+
+O selectie de 16 loturi de caprolactana cristalizata,tip A are continutul de
+baze volatile $\overline{x}=0.22$ miliechivalenti pe Kg. Presupunem ca
+continutul de baze volatile este o variabila aleatoare avind repartitia $%
+N(\mu ,(0.08)^{2})$.
+
+i)La pragul de semnificatie $\alpha =0.01$ sa se verifice ipoteza $H_{0}:\mu
+=0.20$ fata de $H_{1}:\mu >0.20$.
+
+ii)Care este puterea testului pentru $\mu _{1}=0.21$ ?
+
+\textbf{Rezolvare:}
+
+Deoarece avem $H_{1}:\mu >m_{0}$ si dispersia $\sigma ^{2}=0.08^{2}$ vom
+aplica testul Z unilateral stinga pentru medie.
+
+Vom calcula valoarea critica pentru acest tip de test
+
+\[
+x_{c}=m_{0}+\frac{\sigma }{\sqrt{n}}u_{1-\alpha }=0.20+\frac{0.08}{4}%
+2.225=0.2445 
+\]
+
+Deoarece $\overline{x}<x_{c}$ $(0.22<0.2445)$ voi accepta ipoteza $H_{0}$.
+
+ii)Puterea testului este data de formula
+
+\[
+\pi (m_{1})=\Phi \left( u_{\alpha }+\frac{m_{1}-m_{0}}{\sigma /\sqrt{n}}%
+\right) 
+\]
+
+Inlocuind avem:
+
+\[
+\pi (0.21)=\Phi (-2.225+\frac{0.21-0.2}{0.08/4})=\Phi (-1.725)=1-\Phi
+(1.725)=1-0.9577=0.04226 
+\]
+
+\begin{exercise}
+\bigskip 
+\end{exercise}
+
+Experienta anterioara arata ca durabilitatea unei anvelope auto poate fi
+considerata ca o variabila $N(30000Km,(800Km)^{2})$. Se face o schimbare a
+procesului de productie. O selectie de 100 anvelope are $\overline{x}=29000Km
+$. Pe baza acestei selectii si la un prag de semnificatie $\alpha =0.05$
+putem spune ca noua metoda conduce la scaderea durabilitatii anvelopelor ?
+
+\textbf{Rezolvare:}
+
+Acesta problema se poate pune in cadrul ipotezelor astfel:
+
+\begin{eqnarray*}
+H_{0} &:&\mu =30000 \\
+H_{1} &:&\mu <30000
+\end{eqnarray*}
+
+Deoarece avem $H_{1}:\mu <m_{0}$ si dispersia $\sigma ^{2}=800^{2}$ vom
+aplica testul Z unitalteral stinga pentru medie.
+
+Vom calcula valoarea critica pentru acest tip de test
+
+\[
+\times _{c}=m_{0}+\frac{\sigma }{\sqrt{n}}u_{\alpha }=30000+\frac{800}{10}%
+(-1.645)=29868.4 
+\]
+
+Deoarece $\overline{x}=29000<x_{c}=29868.4$ resping ipoteza $H_{0}$ deci
+intr-adevar noua metoda conduce la scaderea durabilitatii anvelopelor.
+
+\begin{exercise}
+\bigskip 
+\end{exercise}
+
+Durata de functionare a unui tip oarecare de bec electric de 100 W, poate fi
+considerata o variabila aleatoare $X\symbol{126}N(1500,(200)^{2})$. O
+selectie de 25 astfel de becuri da o durata medie de functionare de 1380 de
+ore. La pragul de semnificatie $\alpha =0.01$ sa se verifice ipoteza $%
+H_{0}:\mu =1500$ fata de alternativa $H_{1}:\mu <1500$.
+
+\textbf{Rezolvare:}
+
+Deoarece avem $H_{1}:\mu <m_{0}$ si dispersia $\sigma ^{2}=200^{2}$ vom
+aplica testul Z unitalteral stinga pentru medie.
+
+Vom calcula valoarea critica pentru acest tip de test
+
+\[
+\times _{c}=m_{0}+\frac{\sigma }{\sqrt{n}}u_{\alpha }=1500+\frac{200}{5}%
+(-2.325)=1407 
+\]
+
+Deoarece $\overline{x}=1380<x_{c}=1407$ resping ipoteza $H_{0}$.
+
+\begin{exercise}
+\bigskip 
+\end{exercise}
+
+Masa medie a lucuitorilor unui oras poate fi considerata ca o variabila
+aleatoare $X\symbol{126}N(70,5^{2})$. O selectie de 100 locuitori ai
+orajului, cu domiciliul in zona parcurilor, este gasita ca avind o masa de
+69Kg.
+
+i)Acest rezultat indica faptul ca locuitorii avind domiciliul in zona
+parcurior au o masa mai mica decit a celorlalti locuitori la pragul de
+semnificatie $\alpha =0.05$ ?
+
+ii)Care este puteea tetului pentru $\mu _{1}=68$ ?
+
+\textbf{Rezolvare:}
+
+i)Acest test poate fi vazut in cadrul ipotezelor statistice astfel:
+
+\begin{eqnarray*}
+H_{0} &:&\mu =70 \\
+H_{1} &:&\mu <70
+\end{eqnarray*}
+
+Deoarece avem $H_{1}:\mu <m_{0}$ si dispersia $\sigma ^{2}=5^{2}$ vom aplica
+testul Z unitalteral stinga pentru medie.
+
+Vom calcula valoarea critica pentru acest tip de test
+
+\[
+\times _{c}=m_{0}+\frac{\sigma }{\sqrt{n}}u_{\alpha }=70+\frac{5}{10}%
+(-1.645)=69.1775 
+\]
+
+Deoarece $\overline{x}=69<x_{c}=69.1775$ resping ipoteza $H_{0}$ deci
+locuitorii avind domiciliul in zona parcurilor au o masa mai mica decit a
+celorlalti locuitori.
+
+ii)Puterea testului este data de formula
+
+\[
+\pi (m_{1})=\Phi \left( u_{\alpha }+\frac{m_{1}-m_{0}}{\sigma /\sqrt{n}}%
+\right) 
+\]
+
+Inlocuind avem:
+
+\[
+\pi (68)=\Phi \left( -1.645+\frac{68-70}{5/10}\right) =\Phi (-5.645)=1-\Phi
+(5.645)=0!! 
+\]
+
+\end{document}
