@@ -1,0 +1,104 @@
+{VERSION 5 0 "IBM INTEL NT" "5.0" }
+{USTYLETAB {CSTYLE "Maple Input" -1 0 "Courier" 0 1 255 0 0 1 0 1 0 0 
+1 0 0 0 0 1 }{CSTYLE "2D Math" -1 2 "Times" 0 1 0 0 0 0 0 0 2 0 0 0 0 
+0 0 1 }{CSTYLE "2D Output" 2 20 "" 0 1 0 0 255 1 0 0 0 0 0 0 0 0 0 1 }
+{PSTYLE "Normal" -1 0 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 2 2 2 2 
+2 2 1 1 1 1 }1 1 0 0 0 0 1 0 1 0 2 2 0 1 }{PSTYLE "Text Output" -1 2 
+1 {CSTYLE "" -1 -1 "Courier" 1 10 0 0 255 1 0 0 0 0 0 1 3 0 3 0 }1 0 
+0 -1 -1 -1 0 0 0 0 0 0 -1 0 }{PSTYLE "Warning" 2 7 1 {CSTYLE "" -1 -1 
+"" 0 1 0 0 255 1 0 0 0 0 0 0 1 0 0 0 }0 0 0 -1 -1 -1 0 0 0 0 0 0 -1 0 
+}{PSTYLE "Maple Output" -1 11 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 
+2 2 2 2 2 2 1 1 1 1 }3 3 0 0 0 0 1 0 1 0 2 2 0 1 }{PSTYLE "Maple Outpu
+t" -1 12 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 1 1 1 1 }
+1 3 0 0 0 0 1 0 1 0 2 2 0 1 }}
+{SECT 0 {EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 8 "restart;" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 54 "bipartite3v:=proc(f,a,b,c,xa1,xa2,y
+a1,ya2,za1,za2,eps)" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 46 "local i,j,jx
+,x,y,z,x1,y1,x2,y2,z1,z2,fxyz,sol;" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 
+50 "description `It find solution for R3->R function`;" }}{PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 13 "with(linalg):" }{TEXT -1 0 "" }}{PARA 0 "> " 
+0 "" {MPLTEXT 1 0 57 "print(`solution is in a vector with 2 elements x
+ and y`);" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 23 "fxyz:=unapply(f,a,b,c)
+:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 17 "x1:=xa1: x2:=xa2:" }}{PARA 0 "
+> " 0 "" {MPLTEXT 1 0 17 "y1:=ya1: y2:=ya2:" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 17 "z1:=za1: z2:=za2:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 
+46 "if evalf(fxyz(x1,y1,z1)*fxyz(x2,y2,z2))>0 then" }}{PARA 0 "> " 0 "
+" {MPLTEXT 1 0 24 "print(`Wrong Interval`);" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 16 "return NULL: fi:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 
+61 "while(evalf(abs(fxyz((x1+x2)/2,(y1+y2)/2,(z1+z2)/2)))>eps) do" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 52 "if evalf(fxyz((x1+x2)/2,(y1+y2)/2,(
+z1+z2)/2))=0 then" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 68 "sol[0]:=(x1+x2
+)/2: sol[1]:=(y1+y2)/2: sol[2]:=(z1+z2)/2: return sol;" }}{PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 72 "else if evalf(fxyz(x1,y1,z1)*fxyz((x1+x2)/2,(y
+1+y2)/2,(z1+z2)/2))<0 then" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 14 "x2:=(
+x1+x2)/2:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 14 "y2:=(y1+y2)/2:" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 14 "z2:=(z1+z2)/2:" }}{PARA 0 "> " 0 "
+" {MPLTEXT 1 0 72 "else if evalf(fxyz(x1,(y1+y2)/2,z1)*fxyz((x1+x2)/2,
+y2,(z1+z2)/2))<0 then" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 14 "x2:=(x1+x2
+)/2:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 14 "y1:=(y1+y2)/2:" }}{PARA 0 "
+> " 0 "" {MPLTEXT 1 0 14 "z2:=(z1+z2)/2:" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 72 "else if evalf(fxyz((x1+x2)/2,y1,z1)*fxyz(x2,(y1+y2)/2
+,(z1+z2)/2))<0 then" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 14 "x1:=(x1+x2)/
+2:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 14 "y2:=(y1+y2)/2:" }}{PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 14 "z2:=(z1+z2)/2:" }}{PARA 0 "> " 0 "" {MPLTEXT 
+1 0 72 "else if evalf(fxyz((x1+x2)/2,(y1+y2)/2,z1)*fxyz(x2,y2,(z1+z2)/
+2))<0 then" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 14 "x1:=(x1+x2)/2:" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 14 "y1:=(y1+y2)/2:" }}{PARA 0 "> " 0 "
+" {MPLTEXT 1 0 14 "z2:=(z1+z2)/2:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 
+72 "else if evalf(fxyz(x1,y1,(z1+z2)/2)*fxyz((x1+x2)/2,(y1+y2)/2,z2))<
+0 then" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 14 "x2:=(x1+x2)/2:" }}{PARA 
+0 "> " 0 "" {MPLTEXT 1 0 14 "y2:=(y1+y2)/2:" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 14 "z1:=(z1+z2)/2:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 72 "
+else if evalf(fxyz(x1,(y1+y2)/2,(z1+z2)/2)*fxyz((x1+x2)/2,y2,z2))<0 th
+en" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 14 "x2:=(x1+x2)/2:" }}{PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 14 "y1:=(y1+y2)/2:" }}{PARA 0 "> " 0 "" {MPLTEXT 
+1 0 14 "z1:=(z1+z2)/2:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 72 "else if e
+valf(fxyz((x1+x2)/2,y1,(z1+z2)/2)*fxyz(x2,(y1+y2)/2,z2))<0 then" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 14 "x1:=(x1+x2)/2:" }}{PARA 0 "> " 0 "
+" {MPLTEXT 1 0 14 "y2:=(y1+y2)/2:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 
+14 "z1:=(z1+z2)/2:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 72 "else if evalf
+(fxyz((x1+x2)/2,(y1+y2)/2,(z1+z2)/2)*fxyz(x2,y2,z2))<0 then" }}{PARA 
+0 "> " 0 "" {MPLTEXT 1 0 14 "x1:=(x1+x2)/2:" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 14 "y1:=(y1+y2)/2:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 14 "
+z1:=(z1+z2)/2:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 35 "fi: fi: fi: fi: f
+i: fi: fi: fi: fi:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 7 "end do:" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 68 "sol[0]:=(x1+x2)/2: sol[1]:=(y1+y2)/
+2: sol[2]:=(z1+z2)/2: return sol;" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 4 
+"end;" }}{PARA 12 "" 1 "" {XPPMATH 20 "6#>%,bipartite3vGf*6-%\"fG%\"aG
+%\"bG%\"cG%$xa1G%$xa2G%$ya1G%$ya2G%$za1G%$za2G%$epsG60%\"iG%\"jG%#jxG%
+\"xG%\"yG%\"zG%#x1G%#y1G%#x2G%#y2G%#z1G%#z2G%%fxyzG%$solG6\"FAC1-%%wit
+hG6#%'linalgG-%&printG6#%Psolution~is~in~a~vector~with~2~elements~x~an
+d~yG>80-%(unapplyG6&9$9%9&9'>8*9(>8,9)>8+9*>8-9+>8.9,>8/9-@$2\"\"!-%&e
+valfG6#*&-FL6%FUFenF[o\"\"\"-FL6%FXFhnF^oFioC$-FH6#%/Wrong~IntervalGO%
+%NULLG?(FAFioFioFA29.-Fdo6#-%$absG6#-FL6%,&*&#Fio\"\"#FioFUFioFio*&F^q
+FioFXFioFio,&*&F^qFioFenFioFio*&F^qFioFhnFioFio,&*&F^qFioF[oFioFio*&F^
+qFioF^oFioFio@%/-FdoFipFboC&>&816#FboF\\q>&F]r6#FioFaq>&F]r6#F_qFdqOF]
+r@%2-Fdo6#*&FgoFioFjpFioFboC%>FXF\\q>FhnFaq>F^oFdq@%2-Fdo6#*&-FL6%FUFa
+qF[oFio-FL6%F\\qFhnFdqFioFboC%>FXF\\q>FenFaq>F^oFdq@%2-Fdo6#*&-FL6%F\\
+qFenF[oFio-FL6%FXFaqFdqFioFboC%>FUF\\q>FhnFaq>F^oFdq@%2-Fdo6#*&-FL6%F
+\\qFaqF[oFio-FL6%FXFhnFdqFioFboC%>FUF\\q>FenFaq>F^oFdq@%2-Fdo6#*&-FL6%
+FUFenFdqFio-FL6%F\\qFaqF^oFioFboC%>FXF\\q>FhnFaq>F[oFdq@%2-Fdo6#*&-FL6
+%FUFaqFdqFio-FL6%F\\qFhnF^oFioFboC%>FXF\\q>FenFaq>F[oFdq@%2-Fdo6#*&-FL
+6%F\\qFenFdqFio-FL6%FXFaqF^oFioFboC%>FUF\\q>FhnFaq>F[oFdq@$2-Fdo6#*&Fj
+pFioFjoFioFboC%>FUF\\q>FenFaq>F[oFdq>F\\rF\\q>F`rFaq>FcrFdqOF]r6#%DIt~
+find~solution~for~R3->R~functionGFAFA" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 25 "f1:=sin(x)+cos(y)+sin(z);" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#>%#f1G,(-%$sinG6#%\"xG\"\"\"-%$cosG6#%\"yGF*-F'6#%\"zGF
+*" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 50 "sol:=bipartite3v(f1,x,
+y,z,-1,2,-1,2,-1,2,0.00005):" }}{PARA 7 "" 1 "" {TEXT -1 80 "Warning, \+
+the protected names norm and trace have been redefined and unprotected
+\n" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#%Psolution~is~in~a~vector~with~2
+~elements~x~and~yG" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 11 "print
+(sol);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#-%&TABLEG6#7%/\"\"!#!&rF$\"'
+s58/\"\"\"#!&Fe(F+/\"\"##!&(p#)F+" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 25 "f1xyz:=unapply(f1,x,y,z);" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#>%&f1xyzGf*6%%\"xG%\"yG%\"zG6\"6$%)operatorG%&arrowGF*,
+(-%$sinG6#9$\"\"\"-%$cosG6#9%F3-F06#9&F3F*F*F*" }}}{EXCHG {PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 35 "evalf(f1xyz(sol[0],sol[1],sol[2]));" }}{PARA 
+11 "" 1 "" {XPPMATH 20 "6#$!'h[W!#5" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 43 "savelibname:=cat(libname,`/bipartite3v.m`);" }}{PARA 
+0 "> " 0 "" {MPLTEXT 1 0 23 "savelib('bipartite3v');" }}{PARA 0 "> " 
+0 "" {MPLTEXT 1 0 0 "" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%,savelibnam
+eGQLC:\\PROGRAM~FILES\\MAPLE~8/lib/bipartitie3v.m6\"" }}}{EXCHG {PARA 
+0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}}{MARK "4 0 0" 0 }{VIEWOPTS 1 1 0 1 
+1 1803 1 1 1 1 }{PAGENUMBERS 0 1 2 33 1 1 }
